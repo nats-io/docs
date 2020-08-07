@@ -139,7 +139,7 @@ It uses a paging mechanism which defaults to 1024 connections.
 | Argument | Values | Description |
 |:---|:---|:---|
 | sort   | (*see sort options*)     | Sorts the results.  Default is connection ID.           |
-| auth   | true, 1, false, 0        | Include username.  Default is false.                    |
+| auth   | true, 1, false, 0        | Include username and when configured, account.  Default is false.   |
 | subs   | true, 1, false, 0        | Include subscriptions.  Default is false.               |
 | offset | number > 0               | Pagination offset.  Default is 0.                       |
 | limit  | number > 0               | Number of results to return.  Default is 1024.          |
@@ -167,6 +167,9 @@ It uses a paging mechanism which defaults to 1024 connections.
 |reason     | Reason for a closed connection                       |
 
 #### Examples
+
+
+You can filter using `auth=1` by username or account if multiple accounts are utilized.
 
 Get up to 1024 connections: <a href="http://demo.nats.io:8222/connz" target="_blank">http://demo.nats.io:8222/connz</a>
 
